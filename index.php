@@ -69,10 +69,10 @@
                     <td><?= $datos->empresa ?></td>
                     <td><?= $datos->nombre_contacto ?></td>
                     <td><?= $datos->fecha_contacto ?></td>
-                    <td><?= $datos->estatus ?></td>
                     <td><?= $datos->pagado ?></td>
                     <td><?= $datos->metodo_pago ?></td>
                     <td><?= $datos->factura ?></td>
+                    <td><?= $datos->estatus ?></td>
                     <td>
                         <a href="" class="btn btn small-btn btn-warning" ><i class="fa-solid fa-pen-to-square"></i></a>
                         <a href="" class="btn btn small-btn btn-danger"><i class="fa-solid fa-trash-can"></i></a>
