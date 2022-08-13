@@ -13,11 +13,15 @@
 </head>
 <body>
     <h1 class="text-center">Entre Vides</h1>
+    <?php 
+    include "modelo/conexion.php";
+    include "controlador/eliminar_empresa.php";
+    ?>
     <div class="container-fluid row">
         <form class="col-3" method="POST">
          <h2 class="text-center text-secondary" >Registro de Empresas Entre Vides</h2>
             <?php 
-            include "modelo/conexion.php";
+            
             include "controlador/registro_persona.php";  
             ?>
          <div class="mb-3">
