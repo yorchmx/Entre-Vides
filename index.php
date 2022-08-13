@@ -49,7 +49,7 @@
                   <tr>
                     <th scope="col">id</th>
                     <th scope="col">Empresa</th>
-                    <th scope="col">Nomre de contacto</th>
+                    <th scope="col">Nombre de contacto</th>
                     <th scope="col">Fecha de contacto</th>
                     <th scope="col">Pagado</th>
                     <th scope="col">Metodo de pago</th>
