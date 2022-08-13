@@ -14,31 +14,35 @@
 <body>
     <h1 class="text-center">Entre Vides</h1>
     <div class="container-fluid row">
-        <form class="col-3">
-            <h2 class="text-center text-secondary" >Registro de Empresas Entre Vides</h2>
+        <form class="col-3" method="POST">
+         <h2 class="text-center text-secondary" >Registro de Empresas Entre Vides</h2>
+            <?php 
+            include "modelo/conexion.php";
+            include "controlador/registro_persona.php";  
+            ?>
          <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Nombre de la empresa</label>
-            <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+            <input type="text" class="form-control" name="empresa">
          </div><div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Nombre del contacto</label>
-            <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+            <input type="text" class="form-control" name="nombre_contacto">
          </div><div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Fecha de contacto</label>
-            <input type="date" class="form-control" id="name" aria-describedby="emailHelp">
+            <input type="date" class="form-control" name="fecha_contacto">
          </div><div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Pagado</label>
-            <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+            <input type="text" class="form-control" name="pagado">
          </div><div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Metodo de pago</label>
-            <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+            <input type="text" class="form-control" name="metodo_pago">
          </div>
          <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Factura</label>
-            <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+            <input type="text" class="form-control" name="factura">
          </div>
          <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Estatus</label>
-            <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+            <input type="text" class="form-control" name="estatus">
          </div>
             
             <button type="submit" class="btn btn-primary" name="btnregistrar" value="ok" >Registrar</button>
@@ -74,8 +78,8 @@
                     <td><?= $datos->factura ?></td>
                     <td><?= $datos->estatus ?></td>
                     <td>
-                        <a href="" class="btn btn small-btn btn-warning" ><i class="fa-solid fa-pen-to-square"></i></a>
-                        <a href="" class="btn btn small-btn btn-danger"><i class="fa-solid fa-trash-can"></i></a>
+                        <a href="modificar_empresa.php?id=<?= $datos->id ?>" class="btn btn small-btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
+                        <a onclick="return eliminar()" href="index.php?id=<?= $datos->id ?>" class="btn btn small-btn btn-danger"><i class="fa-solid fa-trash-can"></i></a>
                         
                     </td>
                   </tr>
