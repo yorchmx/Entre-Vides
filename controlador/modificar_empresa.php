@@ -1,7 +1,7 @@
 <?php 
 
 if (!empty($_POST["btnregistrar"])) {
-    if (!empty($_POST["empresa"]) and !empty($_POST["nombre_contacto"]) and !empty($_POST["fecha_contacto"]) and !empty($_POST["pagado"]) and !empty($_POST["metodo_pago"]) and !empty($_POST["factura"]) and !empty($_POST["estatus"])) {
+    if (!empty($_POST["empresa"]) and !empty($_POST["nombre_contacto"]) and !empty($_POST["fecha_contacto"]) and !empty($_POST["pagado"]) and !empty($_POST["metodo_pago"]) and !empty($_POST["factura"]) and !empty($_POST["estatus"]) and !empty($_POST["agente"])) {
         $id=$_POST["id"];
         $empresa=$_POST["empresa"];
         $nombre_contacto=$_POST["nombre_contacto"];
@@ -10,7 +10,8 @@ if (!empty($_POST["btnregistrar"])) {
         $metodo_pago=$_POST["metodo_pago"];
         $factura=$_POST["factura"];
         $estatus=$_POST["estatus"];
-        $sql=$conexion->query("update empresas set empresa='$empresa', nombre_contacto='$nombre_contacto', fecha_contacto='$fecha_contacto', pagado='$pagado', metodo_pago='$metodo_pago', factura='$factura', estatus='$estatus' where id=$id ");
+        $agente=$_POST["agente"];
+        $sql=$conexion->query("update empresas set empresa='$empresa', nombre_contacto='$nombre_contacto', fecha_contacto='$fecha_contacto', pagado='$pagado', metodo_pago='$metodo_pago', factura='$factura', estatus='$estatus', agente='$agente' where id=$id ");
         if ($sql==1) {
             header("location:index.php");
         } else {

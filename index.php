@@ -27,26 +27,57 @@
          <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Nombre de la empresa</label>
             <input type="text" class="form-control" name="empresa">
-         </div><div class="mb-3">
+         </div>
+         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Nombre del contacto</label>
             <input type="text" class="form-control" name="nombre_contacto">
          </div><div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Fecha de contacto</label>
             <input type="date" class="form-control" name="fecha_contacto">
-         </div><div class="mb-3">
+         </div>
+         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Pagado</label>
-            <input type="text" class="form-control" name="pagado">
-         </div><div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Metodo de pago</label>
-            <input type="text" class="form-control" name="metodo_pago">
+            <select class="form-select" name="pagado" aria-label="Default select example">
+               <option value="Sí">Sí</option>
+               <option value="No">No</option> 
+            </select>
+         </div>
+         <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Método de pago</label>
+            <select class="form-select" name="metodo_pago" aria-label="Default select example">
+               <option value="Transferencia">Transferencia</option>
+               <option value="Cheque">Cheque</option>
+               <option value="Efectivo">Efectivo</option>
+               <option value="Especie">Especie</option>   
+            </select>
          </div>
          <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Factura</label>
-            <input type="text" class="form-control" name="factura">
+            <select class="form-select" name="factura" aria-label="Default select example">
+               <option value="Sí">Sí</option>
+               <option value="No">No</option> 
+            </select>
          </div>
          <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Estatus</label>
-            <input type="text" class="form-control" name="estatus">
+            <select class="form-select" name="estatus" aria-label="Default select example">
+               <option value="Confirmado">Confirmado</option>
+               <option value="Pendiente">Pendiente</option>
+               <option value="No acepta">No acepta</option>
+            </select>
+         </div>
+         <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Agente</label>
+            <select class="form-select" name="agente" aria-label="Default select example">
+               <option value="Nadia">Nadia</option>
+               <option value="Estela">Estela</option>
+               <option value="Aldo">Aldo</option>
+               <option value="Erick">Erick</option>  
+               <option value="Neddy">Neddy</option>  
+               <option value="Sonia">Sonia</option>  
+               <option value="Balam">Balam</option>  
+               <option value="Claudia">Claudia</option> 
+            </select>
          </div>
             
             <button type="submit" class="btn btn-primary" name="btnregistrar" value="ok" >Registrar</button>
@@ -63,6 +94,7 @@
                     <th scope="col">Metodo de pago</th>
                     <th scope="col">Factura</th>
                     <th scope="col">Estatus</th>
+                    <th scope="col">Agente</th>
                     <th scope="col"></th>
                   </tr>
                 </thead>
@@ -73,14 +105,15 @@
                     while ($datos = $sql->fetch_object()) { ?>
                       <tr>
              
-                    <td><?= $datos->id ?></td>
-                    <td><?= $datos->empresa ?></td>
-                    <td><?= $datos->nombre_contacto ?></td>
-                    <td><?= $datos->fecha_contacto ?></td>
-                    <td><?= $datos->pagado ?></td>
-                    <td><?= $datos->metodo_pago ?></td>
-                    <td><?= $datos->factura ?></td>
-                    <td><?= $datos->estatus ?></td>
+                    <td class="datos"><?= $datos->id ?></td>
+                    <td class="datos"><?= $datos->empresa ?></td>
+                    <td class="datos"><?= $datos->nombre_contacto ?></td>
+                    <td class="datos"><?= $datos->fecha_contacto ?></td>
+                    <td class="datos"><?= $datos->pagado ?></td>
+                    <td class="datos"><?= $datos->metodo_pago ?></td>
+                    <td class="datos"><?= $datos->factura ?></td>
+                    <td class="datos"><?= $datos->estatus ?></td>
+                    <td class="datos"><?= $datos->agente ?></td>
                     <td>
                         <a href="modificar_empresa.php?id=<?= $datos->id ?>" class="btn btn small-btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
                         <a onclick="return eliminar()" href="index.php?id=<?= $datos->id ?>" class="btn btn small-btn btn-danger"><i class="fa-solid fa-trash-can"></i></a>

@@ -35,7 +35,7 @@ $sql=$conexion->query("select * from empresas where id=$id");
             <label for="exampleInputEmail1" class="form-label">Pagado</label>
             <input type="text" class="form-control" name="pagado" value="<?= $datos->pagado ?>" >
          </div><div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Metodo de pago</label>
+            <label for="exampleInputEmail1" class="form-label">Método de pago</label>
             <input type="text" class="form-control" name="metodo_pago" value="<?= $datos->metodo_pago ?>" >
          </div>
          <div class="mb-3">
@@ -45,6 +45,20 @@ $sql=$conexion->query("select * from empresas where id=$id");
          <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Estatus</label>
             <input type="text" class="form-control" name="estatus" value="<?= $datos->estatus ?>">
+         </div>
+         <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Agente</label>
+            <select class="form-select" name="agente" aria-label="Default select example">
+            <option value="Nadia"><?= $datos->agente ?></option>
+               <option value="Nadia">Nadia</option>
+               <option value="Estela">Estela</option>
+               <option value="Aldo">Aldo</option>
+               <option value="Erick">Erick</option>  
+               <option value="Neddy">Neddy</option>  
+               <option value="Sonia">Sonia</option>  
+               <option value="Balam">Balam</option>  
+               <option value="Claudia">Claudia</option> 
+            </select>
          </div>
 
             <?php }
