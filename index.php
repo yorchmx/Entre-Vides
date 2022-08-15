@@ -11,7 +11,15 @@
 <script src="https://kit.fontawesome.com/504bc46ce6.js" crossorigin="anonymous"></script>
     <title>Entra Vides</title>
 </head>
+
 <body>
+   <script>
+      function eliminar(){
+         var respuesta=confirm("¿Estas seguro que deseas eliminar?");
+         return respuesta
+      }
+   </script>
+
     <h1 class="text-center">Entre Vides</h1>
     <?php 
     include "modelo/conexion.php";
@@ -19,7 +27,7 @@
     ?>
     <div class="container-fluid row">
         <form class="col-3" method="POST">
-         <h2 class="text-center text-secondary" >Registro de Empresas Entre Vides</h2>
+         <h2 class="text-center text-secondary" >Registro de Empresas</h2>
             <?php 
             
             include "controlador/registro_persona.php";  
@@ -38,51 +46,57 @@
          <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Pagado</label>
             <select class="form-select" name="pagado" aria-label="Default select example">
-               <option value="Sí">Sí</option>
-               <option value="No">No</option> 
+            <option selected></option>
+               <option >Sí</option>
+               <option >No</option> 
             </select>
          </div>
          <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Método de pago</label>
             <select class="form-select" name="metodo_pago" aria-label="Default select example">
-               <option value="Transferencia">Transferencia</option>
-               <option value="Cheque">Cheque</option>
-               <option value="Efectivo">Efectivo</option>
-               <option value="Especie">Especie</option>   
+            <option selected></option>
+               <option >Transferencia</option>
+               <option >Tarjeta</option>
+               <option >Efectivo</option>
+               <option >Cortesía</option>   
             </select>
          </div>
          <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Factura</label>
             <select class="form-select" name="factura" aria-label="Default select example">
-               <option value="Sí">Sí</option>
-               <option value="No">No</option> 
+            <option selected></option>
+               <option >Sí</option>
+               <option >No</option> 
             </select>
          </div>
          <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Estatus</label>
             <select class="form-select" name="estatus" aria-label="Default select example">
-               <option value="Confirmado">Confirmado</option>
-               <option value="Pendiente">Pendiente</option>
-               <option value="No acepta">No acepta</option>
+            <option selected></option>
+               <option >Confirmado</option>
+               <option >En espera</option>
+               <option >Correo enviado</option>
+               <option >Sin contactar</option>
             </select>
          </div>
          <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Agente</label>
             <select class="form-select" name="agente" aria-label="Default select example">
-               <option value="Nadia">Nadia</option>
-               <option value="Estela">Estela</option>
-               <option value="Aldo">Aldo</option>
-               <option value="Erick">Erick</option>  
-               <option value="Neddy">Neddy</option>  
-               <option value="Sonia">Sonia</option>  
-               <option value="Balam">Balam</option>  
-               <option value="Claudia">Claudia</option> 
+            <option selected></option>
+               <option >Balam</option>
+               <option >Claudia</option>
+               <option >Erick</option>
+               <option >Estela</option>  
+               <option >Marina</option>  
+               <option >Nadia</option>  
+               <option >Sergio</option>  
+               <option >Sonia</option> 
             </select>
          </div>
             
             <button type="submit" class="btn btn-primary" name="btnregistrar" value="ok" >Registrar</button>
           </form>
-          <div class="col-9 p-4">
+          <div class="col-9 p-2">
             <table class="table">
                 <thead class="bg-info">
                   <tr>
@@ -91,11 +105,11 @@
                     <th scope="col">Nombre de contacto</th>
                     <th scope="col">Fecha de contacto</th>
                     <th scope="col">Pagado</th>
-                    <th scope="col">Metodo de pago</th>
+                    <th scope="col">Método de pago</th>
                     <th scope="col">Factura</th>
                     <th scope="col">Estatus</th>
                     <th scope="col">Agente</th>
-                    <th scope="col"></th>
+                    <th scope="col">Acción</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -116,7 +130,7 @@
                     <td class="datos"><?= $datos->agente ?></td>
                     <td>
                         <a href="modificar_empresa.php?id=<?= $datos->id ?>" class="btn btn small-btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
-                        <a onclick="return eliminar()" href="index.php?id=<?= $datos->id ?>" class="btn btn small-btn btn-danger"><i class="fa-solid fa-trash-can"></i></a>
+                       <!-- <a onclick="return eliminar()" href="index.php?id=<?= $datos->id ?>" class="btn btn small-btn btn-danger"><i class="fa-solid fa-trash-can"></i></a> -->
                         
                     </td>
                   </tr>

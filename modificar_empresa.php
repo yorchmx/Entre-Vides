@@ -13,6 +13,8 @@ $sql=$conexion->query("select * from empresas where id=$id");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Entre Vides</title>
 </head>
 <body>
@@ -25,39 +27,61 @@ $sql=$conexion->query("select * from empresas where id=$id");
             <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Nombre de la empresa</label>
             <input type="text" class="form-control" name="empresa" value="<?= $datos->empresa ?>">
-         </div><div class="mb-3">
+         </div>
+         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Nombre del contacto</label>
             <input type="text" class="form-control" name="nombre_contacto" value="<?= $datos->nombre_contacto ?>">
          </div><div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Fecha de contacto</label>
             <input type="date" class="form-control" name="fecha_contacto" value="<?= $datos->fecha_contacto ?>">
-         </div><div class="mb-3">
+         </div>
+         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Pagado</label>
-            <input type="text" class="form-control" name="pagado" value="<?= $datos->pagado ?>" >
-         </div><div class="mb-3">
+            <select class="form-select" name="pagado" aria-label="Default select example">
+               <option ><?= $datos->pagado ?></option>
+               <option >Sí</option>
+               <option >No</option>
+            </select>
+         </div>
+         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Método de pago</label>
-            <input type="text" class="form-control" name="metodo_pago" value="<?= $datos->metodo_pago ?>" >
+            <select class="form-select" name="metodo_pago" aria-label="Default select example">
+            <option ><?= $datos->metodo_pago ?></option>
+               <option >Transferencia</option>
+               <option >Cheque</option>
+               <option >Efectivo</option>
+               <option >Especie</option>
+            </select>
          </div>
          <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Factura</label>
-            <input type="text" class="form-control" name="factura" value="<?= $datos->factura ?>">
+            <select class="form-select" name="factura" aria-label="Default select example">
+            <option ><?= $datos->factura ?></option>
+               <option >Sí</option>
+               <option >No</option>
+            </select>
          </div>
          <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Estatus</label>
-            <input type="text" class="form-control" name="estatus" value="<?= $datos->estatus ?>">
+            <select class="form-select" name="estatus" aria-label="Default select example">
+            <option ><?= $datos->estatus ?></option>
+               <option >Confirmado</option>
+               <option >Pendiente</option>
+               <option >No acepta</option>
+            </select>
          </div>
          <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Agente</label>
             <select class="form-select" name="agente" aria-label="Default select example">
-            <option value="Nadia"><?= $datos->agente ?></option>
-               <option value="Nadia">Nadia</option>
-               <option value="Estela">Estela</option>
-               <option value="Aldo">Aldo</option>
-               <option value="Erick">Erick</option>  
-               <option value="Neddy">Neddy</option>  
-               <option value="Sonia">Sonia</option>  
-               <option value="Balam">Balam</option>  
-               <option value="Claudia">Claudia</option> 
+            <option ><?= $datos->agente ?></option>
+               <option >Nadia</option>
+               <option >Estela</option>
+               <option >Aldo</option>
+               <option >Erick</option>  
+               <option >Neddy</option>  
+               <option >Sonia</option>  
+               <option >Balam</option>  
+               <option >Claudia</option> 
             </select>
          </div>
 

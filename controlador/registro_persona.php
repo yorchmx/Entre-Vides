@@ -14,7 +14,7 @@ if (!empty($_POST["btnregistrar"])) {
 
        $sql=$conexion->query(" insert into empresas(empresa,nombre_contacto,fecha_contacto,pagado,metodo_pago,factura,estatus,agente) values('$empresa','$nombre_contacto','$fecha_contacto','$pagado','$metodo_pago','$factura','$estatus','$agente') ");
        if ($sql==1) {
-        echo '<div class="alert alert-succes">Empresa registrada correctamente</div>';
+        echo '<div class="alert alert-success">Empresa registrada correctamente</div>';
        } else {
         echo '<div class="alert alert-danger">Error al registrar empresa</div>';
        }
