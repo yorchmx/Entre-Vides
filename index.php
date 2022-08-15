@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <!-- CSS only -->
+    <script src="./jquery-3.6.0.min.js" ></script>
+    <script class="./materialize/js/materialize.js" ></script>
+    <link rel="stylesheet" href="./materialize/css/materialize.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 <script src="https://kit.fontawesome.com/504bc46ce6.js" crossorigin="anonymous"></script>
-    <title>Entra Vides</title>
+<link rel="stylesheet" href="style.css">
+    <title>Entre Vides</title>
 </head>
 
 <body>
@@ -32,6 +34,7 @@
             
             include "controlador/registro_persona.php";  
             ?>
+            <br><br>
          <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Nombre de la empresa</label>
             <input type="text" class="form-control" name="empresa">
@@ -96,6 +99,7 @@
             
             <button type="submit" class="btn btn-primary" name="btnregistrar" value="ok" >Registrar</button>
           </form>
+          <br><br>
           <div class="col-9 p-2">
             <table class="table">
                 <thead class="bg-info">
@@ -139,6 +143,9 @@
                  
                 </tbody>
               </table>
+
+              <br><br>
+              <a href="excel.php" class="btn-small blue z-depth-2">Descargar Excel</a>
 
           </div>
     </div>
