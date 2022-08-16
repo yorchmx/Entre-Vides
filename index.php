@@ -50,6 +50,7 @@
             <label for="exampleInputEmail1" class="form-label">Pagado</label>
             <select class="form-select" name="pagado" aria-label="Default select example">
             <option selected></option>
+               <option >Anticipo</option>
                <option >Sí</option>
                <option >No</option> 
             </select>
@@ -58,6 +59,7 @@
             <label for="exampleInputEmail1" class="form-label">Método de pago</label>
             <select class="form-select" name="metodo_pago" aria-label="Default select example">
             <option selected></option>
+               <option >Por confirmar</option>
                <option >Transferencia</option>
                <option >Tarjeta</option>
                <option >Efectivo</option>
@@ -68,6 +70,7 @@
             <label for="exampleInputEmail1" class="form-label">Factura</label>
             <select class="form-select" name="factura" aria-label="Default select example">
             <option selected></option>
+               <option >Por confirmar</option>
                <option >Sí</option>
                <option >No</option> 
             </select>
@@ -80,6 +83,7 @@
                <option >En espera</option>
                <option >Correo enviado</option>
                <option >Sin contactar</option>
+               <option >No participa</option>
             </select>
          </div>
          <div class="mb-3">
@@ -91,7 +95,8 @@
                <option >Erick</option>
                <option >Estela</option>  
                <option >Marina</option>  
-               <option >Nadia</option>  
+               <option >Nadia</option>
+               <option >Neddy</option>  
                <option >Sergio</option>  
                <option >Sonia</option> 
             </select>
@@ -104,16 +109,16 @@
             <table class="table">
                 <thead class="bg-info">
                   <tr>
-                    <th scope="col">id</th>
-                    <th scope="col">Empresa</th>
-                    <th scope="col">Nombre de contacto</th>
-                    <th scope="col">Fecha de contacto</th>
-                    <th scope="col">Pagado</th>
-                    <th scope="col">Método de pago</th>
-                    <th scope="col">Factura</th>
-                    <th scope="col">Estatus</th>
-                    <th scope="col">Agente</th>
-                    <th scope="col">Acción</th>
+                    <th scope="col" class="columna">id</th>
+                    <th scope="col" class="columna">Empresa</th>
+                    <th scope="col" class="columna">Nombre de contacto</th>
+                    <th scope="col" class="columna">Fecha de contacto</th>
+                    <th scope="col" class="columna">Pagado</th>
+                    <th scope="col" class="columna">Método de pago</th>
+                    <th scope="col" class="columna">Factura</th>
+                    <th scope="col" class="columna">Estatus</th>
+                    <th scope="col" class="columna">Agente</th>
+                    <th scope="col" class="columna">Acciones</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -134,7 +139,7 @@
                     <td class="datos"><?= $datos->agente ?></td>
                     <td>
                         <a href="modificar_empresa.php?id=<?= $datos->id ?>" class="btn btn small-btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></a>
-                       <!-- <a onclick="return eliminar()" href="index.php?id=<?= $datos->id ?>" class="btn btn small-btn btn-danger"><i class="fa-solid fa-trash-can"></i></a> -->
+                        <a onclick="return eliminar()" href="index.php?id=<?= $datos->id ?>" class="btn btn small-btn btn-danger"><i class="fa-solid fa-trash-can"></i></a>
                         
                     </td>
                   </tr>

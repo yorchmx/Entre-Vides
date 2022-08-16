@@ -39,6 +39,7 @@ $sql=$conexion->query("select * from empresas where id=$id");
             <label for="exampleInputEmail1" class="form-label">Pagado</label>
             <select class="form-select" name="pagado" aria-label="Default select example">
                <option ><?= $datos->pagado ?></option>
+               <option >Anticipo</option>
                <option >Sí</option>
                <option >No</option>
             </select>
@@ -46,19 +47,20 @@ $sql=$conexion->query("select * from empresas where id=$id");
          <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Método de pago</label>
             <select class="form-select" name="metodo_pago" aria-label="Default select example">
-            <option ><?= $datos->metodo_pago ?></option>
+               <option >Por confirmar</option>
                <option >Transferencia</option>
-               <option >Cheque</option>
+               <option >Tarjeta</option>
                <option >Efectivo</option>
-               <option >Especie</option>
+               <option >Cortesía</option>  
             </select>
          </div>
          <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Factura</label>
             <select class="form-select" name="factura" aria-label="Default select example">
             <option ><?= $datos->factura ?></option>
+               <option >Por confirmar</option>
                <option >Sí</option>
-               <option >No</option>
+               <option >No</option> 
             </select>
          </div>
          <div class="mb-3">
@@ -66,22 +68,25 @@ $sql=$conexion->query("select * from empresas where id=$id");
             <select class="form-select" name="estatus" aria-label="Default select example">
             <option ><?= $datos->estatus ?></option>
                <option >Confirmado</option>
-               <option >Pendiente</option>
-               <option >No acepta</option>
+               <option >En espera</option>
+               <option >Correo enviado</option>
+               <option >Sin contactar</option>
+               <option >No participa</option>
             </select>
          </div>
          <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Agente</label>
             <select class="form-select" name="agente" aria-label="Default select example">
             <option ><?= $datos->agente ?></option>
+               <option >Balam</option>
+               <option >Claudia</option>
+               <option >Erick</option>
+               <option >Estela</option>  
+               <option >Marina</option>  
                <option >Nadia</option>
-               <option >Estela</option>
-               <option >Aldo</option>
-               <option >Erick</option>  
                <option >Neddy</option>  
-               <option >Sonia</option>  
-               <option >Balam</option>  
-               <option >Claudia</option> 
+               <option >Sergio</option>  
+               <option >Sonia</option> 
             </select>
          </div>
 

@@ -1,6 +1,6 @@
 <?php 
 header("Content-Type: application/xsl");
-header("Content-Disposition: attachment; filename= vides.xls");
+header("Content-Disposition: attachment; filename= Entre_Vides.xls");
 
 
 ?>
