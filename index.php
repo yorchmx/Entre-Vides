@@ -21,8 +21,9 @@
          return respuesta
       }
    </script>
-
+      <br>
     <h1 class="text-center">Entre Vides</h1>
+    <br>
     <?php 
     include "modelo/conexion.php";
     include "controlador/eliminar_empresa.php";
@@ -105,7 +106,7 @@
             <button type="submit" class="btn btn-primary" name="btnregistrar" value="ok" >Registrar</button>
           </form>
           <br><br>
-          <div class="col-9 p-2">
+          <div class="col-8 p-1">
             <table class="table">
                 <thead class="bg-info">
                   <tr>
